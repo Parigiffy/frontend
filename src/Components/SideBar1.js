@@ -81,7 +81,6 @@ const SideBar1 = () => {
                               // navigate(`/product/${department._id}`);
                               navigate(`/category/${department._id}`);
                               deactivate_sidebar();
-                              window.location.reload();
                             }}
                           >
                             {department.name}
