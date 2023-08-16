@@ -73,11 +73,25 @@ function Navbar() {
     };
   }, []);
 
+  // const searchResults = Products.filter(
+  //   (product) =>
+  //     product.name.toLowerCase().includes(searchText.toLowerCase()) ||
+  //     product.description.toLowerCase().includes(searchText.toLowerCase())
+  // );
   const searchResults = Products.filter(
     (product) =>
       product.name.toLowerCase().includes(searchText.toLowerCase()) ||
       product.description.toLowerCase().includes(searchText.toLowerCase())
   );
+
+  if (searchResults.length === 0 && searchText.trim() !== "") {
+    // Return a "not found" result or message
+    searchResults.push({
+      id: "not-found",
+      name: "Not Found",
+      description: "No matching products found.",
+    });
+  }
 
   const totalQuantity = CartItems.reduce(
     (total, item) => total + item.quantity,
