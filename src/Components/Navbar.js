@@ -22,8 +22,10 @@ function Navbar() {
   const OrderItems = useSelector((state) => state.OrderAdded.OrderItems);
   const [user, setUser] = useState(null);
   const [searchText, setSearchText] = useState("");
+  const [resultSearch, SetResultSearch] = useState("");
   const [Products, setProducts] = useState([]);
-
+  console.log("result", resultSearch);
+  console.log("searchtext", searchText);
   const navigate = useNavigate();
 
   const searchResultsRef = useRef(null);
@@ -57,8 +59,11 @@ function Navbar() {
     const handleClick = (event) => {
       if (
         searchResultsRef.current &&
-        !searchResultsRef.current.contains(event.target)
+        !searchResultsRef.current.contains(event.target) &&
+        event.target.className !== "search-btn" &&
+        event.target.className !== "search-img"
       ) {
+        console.log(event);
         setSearchText("");
       }
     };
@@ -129,10 +134,13 @@ function Navbar() {
               type='text'
               className='search-box'
               placeholder='Search...'
-              value={searchText}
-              onChange={(e) => setSearchText(e.target.value)}
+              value={resultSearch}
+              onChange={(e) => SetResultSearch(e.target.value)}
             />
-            <button className='search-btn'>
+            <button
+              className='search-btn'
+              onClick={() => setSearchText(resultSearch)}
+            >
               <img src={search} className='search-img' />
             </button>
           </div>
@@ -247,10 +255,13 @@ function Navbar() {
             type='text'
             className='search-box'
             placeholder='Search...'
-            value={searchText}
-            onChange={(e) => setSearchText(e.target.value)}
+            value={resultSearch}
+            onChange={(e) => SetResultSearch(e.target.value)}
           />
-          <button className='search-btn'>
+          <button
+            className='search-btn'
+            onClick={() => setSearchText(resultSearch)}
+          >
             <img src={search} className='search-img' />
           </button>
         </div>
