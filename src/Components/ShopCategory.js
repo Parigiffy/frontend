@@ -31,7 +31,9 @@ const ShopCategory = () => {
             </p>
           ))
         ) : 
-          <Spinner/>
+        (
+        <Spinner />
+      )
         }
       </div>
     </Col>
