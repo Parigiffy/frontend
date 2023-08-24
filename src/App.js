@@ -59,27 +59,18 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-           <Route path='/contact' element={<ContactUs />} />
-        // <Route path='/' element={user ? <Navigate to='/home' /> : <Signin />} />
-          <Route path='/' element={ <Home />} />
+        <Route path='/contact' element={<ContactUs />} />
+        {/* <Route path='/' element={user ? <Navigate to='/home' /> : <Signin />} /> */}
+        <Route path='/' element={<Home />} />
 
-          <Route path='/home' element={<Home />} />
-        // <Route path='/signup' element={user ? <Navigate to='/home' /> : <Signup />} />
-        // {user && (
-        //   <>
-        //     <Route path='/wishlists' element={<Lists />} />
-        //     <Route path='/cart' element={<CartSection />} />
-        //     <Route path='/payment' element={<Payment />} />
-        //     <Route path='/orders' element={<Orders />} />
-        //     <Route path='/account' element={<Profile />} />
-        //     <Route path='/product/:id' element={<ProductPage />} />
-        //     <Route path='/category/:id' element={<Category />} />
-        //     <Route path='*' element={<Error />} />
-        //     <Route path='/allproducts' element={<AllProducts />} />
-        //   </>
-        // )}
-
-           <Route path='/wishlists' element={<Lists />} />
+        <Route path='/home' element={<Home />} />
+        {/* <Route
+          path='/signup'
+          element={user ? <Navigate to='/home' /> : <Signup />}
+        /> */}
+        {/* {user && (
+          <>
+            <Route path='/wishlists' element={<Lists />} />
             <Route path='/cart' element={<CartSection />} />
             <Route path='/payment' element={<Payment />} />
             <Route path='/orders' element={<Orders />} />
@@ -88,19 +79,30 @@ function App() {
             <Route path='/category/:id' element={<Category />} />
             <Route path='*' element={<Error />} />
             <Route path='/allproducts' element={<AllProducts />} />
-         
-        // <React.Fragment>
-        //   <Route path='/ero-admin/login' element={<AdminLogin />} />
-        //   <Route path='/ero-admin' element={<AdminPanel />} />
-        //   <Route path='/admin/products' element={<ProductsView />} />
-        //   <Route path='/admin/addProducts' element={<AddProducts />} />
+          </>
+        )} */}
+        <Route path='/wishlists' element={<Lists />} />
+        <Route path='/cart' element={<CartSection />} />
+        <Route path='/payment' element={<Payment />} />
+        <Route path='/orders' element={<Orders />} />
+        <Route path='/account' element={<Profile />} />
+        <Route path='/product/:id' element={<ProductPage />} />
+        <Route path='/category/:id' element={<Category />} />
+        <Route path='*' element={<Error />} />
+        <Route path='/allproducts' element={<AllProducts />} />
 
-        //   <Route path='/admin/payments' element={<Payments />} />
-        //   <Route path='/admin/editProduct/:id' element={<EditProducts />} />
-        //   <Route path='/admin/orders' element={<OrderDetails />} />
-        //   <Route path='/admin/users' element={<Users />} />
-        //   <Route path='/admin/departments' element={<Departments />} />
-        // </React.Fragment>
+        <React.Fragment>
+          <Route path='/ero-admin/login' element={<AdminLogin />} />
+          <Route path='/ero-admin' element={<AdminPanel />} />
+          <Route path='/ero-admin/products' element={<ProductsView />} />
+          <Route path='/ero-admin/addProducts' element={<AddProducts />} />
+
+          <Route path='/ero-admin/payments' element={<Payments />} />
+          <Route path='/ero-admin/editProduct/:id' element={<EditProducts />} />
+          <Route path='/ero-admin/orders' element={<OrderDetails />} />
+          <Route path='/ero-admin/users' element={<Users />} />
+          <Route path='/ero-admin/departments' element={<Departments />} />
+        </React.Fragment>
       </Routes>
     </BrowserRouter>
   );
