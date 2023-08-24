@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";\
+import Spinner from "./Spinner";
 
 const ShopCategory = () => {
   const category = JSON.parse(localStorage.getItem("totalCategory"));
@@ -30,7 +31,7 @@ const ShopCategory = () => {
             </p>
           ))
         ) : (
-          <p>loading</p>
+          <Spinner/>
         )}
       </div>
     </Col>
