@@ -78,7 +78,7 @@ function App() {
         //     <Route path='/allproducts' element={<AllProducts />} />
         //   </>
         // )}
-  <>
+            <>
            <Route path='/wishlists' element={<Lists />} />
             <Route path='/cart' element={<CartSection />} />
             <Route path='/payment' element={<Payment />} />
@@ -88,7 +88,7 @@ function App() {
             <Route path='/category/:id' element={<Category />} />
             <Route path='*' element={<Error />} />
             <Route path='/allproducts' element={<AllProducts />} />
-  </>
+          </>
         <React.Fragment>
           <Route path='/ero-admin/login' element={<AdminLogin />} />
           <Route path='/ero-admin' element={<AdminPanel />} />
