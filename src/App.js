@@ -83,14 +83,14 @@ function App() {
         <React.Fragment>
           <Route path='/ero-admin/login' element={<AdminLogin />} />
           <Route path='/ero-admin' element={<AdminPanel />} />
-          <Route path='/ero-admin/products' element={<ProductsView />} />
-          <Route path='/ero-admin/addProducts' element={<AddProducts />} />
+          <Route path='/admin/products' element={<ProductsView />} />
+          <Route path='/admin/addProducts' element={<AddProducts />} />
 
-          <Route path='/ero-admin/payments' element={<Payments />} />
-          <Route path='/ero-admin/editProduct/:id' element={<EditProducts />} />
-          <Route path='/ero-admin/orders' element={<OrderDetails />} />
-          <Route path='/ero-admin/users' element={<Users />} />
-          <Route path='/ero-admin/departments' element={<Departments />} />
+          <Route path='/admin/payments' element={<Payments />} />
+          <Route path='/admin/editProduct/:id' element={<EditProducts />} />
+          <Route path='/admin/orders' element={<OrderDetails />} />
+          <Route path='/admin/users' element={<Users />} />
+          <Route path='/admin/departments' element={<Departments />} />
         </React.Fragment>
       </Routes>
     </BrowserRouter>
