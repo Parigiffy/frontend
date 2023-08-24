@@ -79,15 +79,15 @@ function App() {
         //   </>
         // )}
 
-           <Route path='/wishlists' element={<Lists />} />
-            <Route path='/cart' element={<CartSection />} />
-            <Route path='/payment' element={<Payment />} />
-            <Route path='/orders' element={<Orders />} />
-            <Route path='/account' element={<Profile />} />
-            <Route path='/product/:id' element={<ProductPage />} />
-            <Route path='/category/:id' element={<Category />} />
-            <Route path='*' element={<Error />} />
-            <Route path='/allproducts' element={<AllProducts />} />
+           // <Route path='/wishlists' element={<Lists />} />
+           //  <Route path='/cart' element={<CartSection />} />
+           //  <Route path='/payment' element={<Payment />} />
+           //  <Route path='/orders' element={<Orders />} />
+           //  <Route path='/account' element={<Profile />} />
+           //  <Route path='/product/:id' element={<ProductPage />} />
+           //  <Route path='/category/:id' element={<Category />} />
+           //  <Route path='*' element={<Error />} />
+           //  <Route path='/allproducts' element={<AllProducts />} />
          
         <React.Fragment>
           <Route path='/ero-admin/login' element={<AdminLogin />} />
