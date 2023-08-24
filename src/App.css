@@ -36,7 +36,7 @@ html{
   padding: 3px 0;
   font-weight: lighter;
 }
-.offcanvas.show:not(.hiding) navbar-nav div {
+.offcanvas.show:not(.hiding) .navbar-nav div {
   border-bottom: #b4afaf solid 2px;
   color: #d24e4e !important;
   padding: 3px 0;
