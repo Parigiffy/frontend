@@ -104,7 +104,7 @@ function Departments() {
                   </span>
                 </Link>
                 {">"}
-                <Link to='/ero-admin/products' style={{ textDecoration: "none" }}>
+                <Link to='/products' style={{ textDecoration: "none" }}>
                   <span className='adminPanelOverviewSubAmazonDashboardTitle'>
                     Products
                   </span>
