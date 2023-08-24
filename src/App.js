@@ -60,15 +60,25 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/contact' element={<ContactUs />} />
-        <Route path='/' element={user ? <Navigate to='/home' /> : <Signin />} />
+        // <Route path='/' element={user ? <Navigate to='/home' /> : <Signin />} />
+          <Route path='/' element={ <Home />} />
+
         <Route path='/home' element={<Home />} />
-        <Route
-          path='/signup'
-          element={user ? <Navigate to='/home' /> : <Signup />}
-        />
-        {user && (
-          <>
-            <Route path='/wishlists' element={<Lists />} />
+        // <Route path='/signup' element={user ? <Navigate to='/home' /> : <Signup />} />
+        // {user && (
+        //   <>
+        //     <Route path='/wishlists' element={<Lists />} />
+        //     <Route path='/cart' element={<CartSection />} />
+        //     <Route path='/payment' element={<Payment />} />
+        //     <Route path='/orders' element={<Orders />} />
+        //     <Route path='/account' element={<Profile />} />
+        //     <Route path='/product/:id' element={<ProductPage />} />
+        //     <Route path='/category/:id' element={<Category />} />
+        //     <Route path='*' element={<Error />} />
+        //     <Route path='/allproducts' element={<AllProducts />} />
+        //   </>
+        // )}
+   <Route path='/wishlists' element={<Lists />} />
             <Route path='/cart' element={<CartSection />} />
             <Route path='/payment' element={<Payment />} />
             <Route path='/orders' element={<Orders />} />
@@ -77,8 +87,6 @@ function App() {
             <Route path='/category/:id' element={<Category />} />
             <Route path='*' element={<Error />} />
             <Route path='/allproducts' element={<AllProducts />} />
-          </>
-        )}
 
         <React.Fragment>
           <Route path='/ero-admin/login' element={<AdminLogin />} />
