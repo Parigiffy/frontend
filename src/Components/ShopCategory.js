@@ -1,10 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Row, Col } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";\
+import { useNavigate } from "react-router-dom";
 import Spinner from "./Spinner";
+import Load from "../imgs/spin.gif";
+
+import { url } from "./url";
+import axios from "axios";
 
 const ShopCategory = () => {
-  const category = JSON.parse(localStorage.getItem("totalCategory"));
+  const [category, setCategory] = useState(null);
+  console.log(category);
+  // const category = JSON.parse(localStorage.getItem("totalCategory"));
+
+  const get_departments = async () => {
+    // let url = "https://127.0.0.1:5000/api/departments";
+    const { data } = await axios.post(`${url}/api/departments`);
+    setCategory(data);
+    // localStorage.setItem("totalCategory", JSON.stringify(data));
+  };
+  useEffect(() => {
+    get_departments();
+  }, []);
+
   const navigate = useNavigate();
 
   return (
@@ -30,11 +47,9 @@ const ShopCategory = () => {
               {category.name}
             </p>
           ))
-        ) : 
-        (
-        <Spinner />
-      )
-        }
+        ) : (
+          <img src={Load} className='loading-img' />
+        )}
       </div>
     </Col>
   );
