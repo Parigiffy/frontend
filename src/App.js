@@ -32,29 +32,29 @@ import ContactUs from "./Components/ContactUs";
 const auth = getAuth(app);
 
 function App() {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
+  // const [user, setUser] = useState(null);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
-      } else {
-        setUser(null);
-      }
-      setLoading(false);
-    });
-  }, []);
+  // useEffect(() => {
+  //   onAuthStateChanged(auth, (user) => {
+  //     if (user) {
+  //       setUser(user);
+  //     } else {
+  //       setUser(null);
+  //     }
+  //     setLoading(false);
+  //   });
+  // }, []);
 
-  if (loading) {
-    return (
-      <>
-        <div className='loading'>
-          <img src={Load} className='loading-img' />
-        </div>
-      </>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <>
+  //       <div className='loading'>
+  //         <img src={Load} className='loading-img' />
+  //       </div>
+  //     </>
+  //   );
+  // }
 
   return (
     <BrowserRouter>
