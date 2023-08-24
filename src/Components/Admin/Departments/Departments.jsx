@@ -98,13 +98,13 @@ function Departments() {
             </div>
             <div className='adminPanelOverviewSubTitleDiv'>
               <p className='adminPanelOverviewSubTitleText'>
-                <Link to='/admin' style={{ textDecoration: "none" }}>
+                <Link to='/ero-admin' style={{ textDecoration: "none" }}>
                   <span className='adminPanelOverviewSubDashboardTitle'>
                     Dashboard
                   </span>
                 </Link>
                 {">"}
-                <Link to='/admin/products' style={{ textDecoration: "none" }}>
+                <Link to='/ero-admin/products' style={{ textDecoration: "none" }}>
                   <span className='adminPanelOverviewSubAmazonDashboardTitle'>
                     Products
                   </span>
