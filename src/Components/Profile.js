@@ -9,6 +9,7 @@ import contact from "../imgs/contact.png";
 import LowerNav from "./LowerNav";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import TopNav from "./TopNav";
 
 const auth = getAuth(app);
 
@@ -50,6 +51,7 @@ function Profile() {
 
   return (
     <>
+    <TopNav/>
       <Navbar />
       <div
         style={user ? { height: "fit-content" } : { height: "70vh" }}
