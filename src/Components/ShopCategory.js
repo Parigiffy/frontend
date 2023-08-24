@@ -30,9 +30,9 @@ const ShopCategory = () => {
               {category.name}
             </p>
           ))
-        ) : (
+        ) : 
           <Spinner/>
-        )}
+        }
       </div>
     </Col>
   );
