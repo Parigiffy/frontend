@@ -72,7 +72,9 @@ function Profile() {
                 onClick={() => {
                   signOut(auth);
                   setTimeout(() => {
-                    navigate("/signup"); 
+                    navigate("/home"); 
+                    // navigate("/signup"); 
+
                   }, 700);
                 }}
                 className="signout-btn"
