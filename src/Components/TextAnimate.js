@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 
-const marqueeTexts = ["60% 0ff Erofetish 30 days deal "];
+const marqueeTexts = ["60% 0ff Erofetish 30 days deal upto"];
 
 const Marquee = () => {
   const marqueeElements = useRef([]);
