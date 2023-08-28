@@ -139,8 +139,6 @@ function Deals() {
                   </div>
                   <div className='card1-price'>
                     <p className='discount'>${items.price}</p>
-                    // <p className='mrp'>${Math.round(items.price * 1.66)}</p>
-                    // <p className='price-off'>(60% OFF)</p>
                   </div>
                 </div>
               </div>
