@@ -150,9 +150,7 @@ function ProductPage() {
                     <img src={product && Rating} className='rating-img' />
                     <img src={product && Rating} className='rating-img' />
                     <img src={product && Rating} className='rating-img' />
-                    <p className='rating-no'>
-                      {product ? `(${product.numReviews})` : ""}
-                    </p>
+            
                   </div>
                 </div>
                 {product ? (
