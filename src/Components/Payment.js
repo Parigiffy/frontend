@@ -729,21 +729,13 @@ function Payment() {
                   GiftCard
                   <img src={gift} width={50} height={49} />
                 </div>
-                <div className='credit payment-select'>
-                  <input
-                    type='radio'
-                    name='payment-method'
-                    onChange={radioChange}
-                    value='Credit'
-                  />
-                  Credit/Debit card
-                </div>
+             
               </div>
               <div
                 style={
                   paymentMode === "Credit"
                     ? { display: "flex" }
-                    : { display: "none" }
+                    : { display: "none" } 
                 }
                 className='online-card-section'
               >
