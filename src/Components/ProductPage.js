@@ -159,7 +159,6 @@ function ProductPage() {
                   <div className='product-actual-price'>
                     <p className='price-one'>Price:</p>
                     <p className='price-two'>${product.price}</p>
-                    <p className='mrp'>${Math.round(product.price * 1.66)}</p>
                   </div>
                 ) : (
                   ""
