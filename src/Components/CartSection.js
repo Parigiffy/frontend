@@ -210,7 +210,7 @@ function CartSection() {
               />
               <button
                 onClick={() => {
-                  if (promocode === "EROGEAR20") {
+                  if (promocode === "EROGEAR10") {
                     TotalValue(totalPrice1);
                     setdiscountCode(promocode);
                     setCorrectCode(true);
@@ -233,7 +233,7 @@ function CartSection() {
               }
               className='applied'
             >
-              <b>EROGEAR20</b> has been applied!
+              <b>EROGEAR10</b> has been applied!
             </p>
             <p
               style={
@@ -261,7 +261,7 @@ function CartSection() {
                 className='money-2'
               >
                 <p className='item-discount'>Discount</p>
-                <p className='item-discount2'>(20%) - ${DiscountPrice}</p>
+                <p className='item-discount2'>(10%) - ${DiscountPrice}</p>
               </div>
               <div className='money-3'>
                 <p className='item-delivery'>Delivery</p>
