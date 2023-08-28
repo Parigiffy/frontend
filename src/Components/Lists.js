@@ -98,7 +98,6 @@ function Lists() {
                           <img src={rating} className='rating-img' />
                           <img src={rating} className='rating-img' />
                           <img src={rating} className='rating-img' />
-                          <p className='rating-text'>5</p>
                         </div>
                       </div>
                       <div className='card1-price'>
