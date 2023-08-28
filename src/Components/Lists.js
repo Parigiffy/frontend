@@ -92,13 +92,7 @@ function Lists() {
                       </p>
                       <div className='category-rating'>
                         <p className='card1-category'>{items.category}</p>
-                        <div className='rating'>
-                          <img src={rating} className='rating-img' />
-                          <img src={rating} className='rating-img' />
-                          <img src={rating} className='rating-img' />
-                          <img src={rating} className='rating-img' />
-                          <img src={rating} className='rating-img' />
-                        </div>
+                     
                       </div>
                       <div className='card1-price'>
                         <p className='discount'>${items.price}</p>
