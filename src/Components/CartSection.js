@@ -52,7 +52,7 @@ function CartSection() {
     return AddedIds.includes(itemId);
   };
 
-  const DiscountPrice = (SubTotal * 0.2).toFixed(2);
+  const DiscountPrice = (SubTotal * 0.1).toFixed(2);
   const TaxPrice = (SubTotal * 0.05).toFixed(2);
 
   const handlePromocode = (event) => {
@@ -214,7 +214,7 @@ function CartSection() {
                     TotalValue(totalPrice1);
                     setdiscountCode(promocode);
                     setCorrectCode(true);
-                  } else if (promocode !== "EROGEAR20") {
+                  } else if (promocode !== "EROGEAR10") {
                     setdiscountCode(promocode);
                     TotalValue(totalPrice2);
                     setCorrectCode(false);
