@@ -197,8 +197,7 @@ function CartSection() {
           >
             <div className='congrats'>
               <p style={{ marginTop: "5px", marginBottom: "0px" }}>
-                Congrats! You're eligible for <b>Free Delivery</b>. Use code{" "}
-                <b>EROGEAR20</b> for 20% discount.
+                Congrats! Enter Promo code to be eligible for a 10% customer’s discount
               </p>
             </div>
             <hr className='horizontal' />
