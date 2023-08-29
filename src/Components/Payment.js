@@ -263,9 +263,9 @@ function Payment() {
 
   const handlePincodeBlur = (event) => {
     if (event.target.value === "") {
-      setPincodeError("Please enter your pincode.");
+      setPincodeError("Please enter your zipcode.");
     } else if (Pincode.length !== 5) {
-      setPincodeError("Please enter a valid pincode.");
+      setPincodeError("Please enter a valid zipcode.");
     } else {
       setPincodeError("");
     }
@@ -546,10 +546,10 @@ function Payment() {
 
                 <div className='user-data2'>
                   <div className='user-pincode'>
-                    <p className='user-pin-number'>Pincode</p>
+                    <p className='user-pin-number'>Zipcode</p>
                     <input
                       type='number'
-                      placeholder='Pincode'
+                      placeholder='Zipcode'
                       onBlur={handlePincodeBlur}
                       onChange={handlePincode}
                       value={Pincode}
