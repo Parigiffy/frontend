@@ -197,7 +197,7 @@ function CartSection() {
           >
             <div className='congrats'>
               <p style={{ marginTop: "5px", marginBottom: "0px" }}>
-                Congrats! Enter Promo code to be eligible for a 10% customer’s discount
+              "Unlock Savings: Enter Promo Code for Exclusive Discounts!"
               </p>
             </div>
             <hr className='horizontal' />
