@@ -56,10 +56,10 @@ function Footer() {
           </Col>
         </Row>
         <div className='text-center text-danger'>
-          <h6>EroFetishGeaars a fast growing Adult Sex Toy Retailer </h6>
+          <h6>EroFetishGears a fast growing Adult Sex Toy Retailer </h6>
         </div>
         <p className='item-desc'>
-          EroFetishGeaars is a place for all things sexual health, wellness, and
+          EroFetishGears is a place for all things sexual health, wellness, and
           pleasure. Our online adult store proudly offers quality sex toys
           online. Browse daily new arrivals with over 7,000 products on hand
           from the top brands of adult sex toys. We’re committed to providing
