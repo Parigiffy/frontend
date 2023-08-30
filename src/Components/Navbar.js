@@ -72,11 +72,7 @@ function Navbar() {
     };
   }, []);
 
-  // const searchResults = Products.filter(
-  //   (product) =>
-  //     product.name.toLowerCase().includes(searchText.toLowerCase()) ||
-  //     product.description.toLowerCase().includes(searchText.toLowerCase())
-  // );
+
   const searchResults = Products.filter(
     (product) =>
       product.name.toLowerCase().includes(searchText.toLowerCase()) ||
