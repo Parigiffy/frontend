@@ -38,6 +38,8 @@ function Navbar() {
       return acc + item.length;
     }
     // otherwise, just add 1 to the accumulator
+       // otherwise, just add 1 to the accumulator
+
     return acc + 1;
   }, 0);
 
