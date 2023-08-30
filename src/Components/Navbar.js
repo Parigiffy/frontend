@@ -50,7 +50,6 @@ function Navbar() {
 
     const GetProducts = async () => {
       const data = await axios.get(`${url}/api/products`);
-      // const new_data = await data.json();
       setProducts(data.data);
     };
 
