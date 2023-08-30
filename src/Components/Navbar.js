@@ -13,7 +13,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import swal from "sweetalert";
 import { url } from "./url";
 import axios from "axios";
-
+ 
 const auth = getAuth(app);
 
 function Navbar() {
