@@ -340,8 +340,7 @@ a {
   .search-btn {
   height: 30px;
   width: 20px;
-
-
+  padding-left: inherit;
 }
 }
 
@@ -357,6 +356,15 @@ a {
   .right-two,
   .right-three {
     margin-right: 12px;
+  }
+   .search-btn {
+  height: 30px;
+  width: 20px;
+  padding-left: inherit;
+}
+.search-box {
+    width: 180px;
+     height: 25px;
   }
 }
 
@@ -378,8 +386,8 @@ a {
   }
     .search-btn {
    height: 30px;
-  width: 20px;
-
+   width: 20px;
+   padding-left: inherit;
 
 }
 }
@@ -392,6 +400,7 @@ a {
     .search-btn {
   height: 30px;
   width: 20px;
+  padding-left: inherit;
 
 
 }
