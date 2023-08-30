@@ -112,7 +112,7 @@ function Home() {
                 </ListGroupItem>
                 <img
                   width={"100%"}
-                  height={"75rem"}
+                  height={"85rem"}
                   src='https://metro.co.uk/wp-content/uploads/2016/11/neon.png?quality=90&strip=all&zoom=1&resize=480%2C293'
                   alt=''
                 />
