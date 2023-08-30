@@ -284,6 +284,7 @@ a {
   }
   .search-box {
     width: 240px;
+   
   }
   .search-results {
     width: 372px;
@@ -297,6 +298,7 @@ a {
   }
   .search-box {
     width: 180px;
+   
   }
   .search-results {
     width: 305px;
@@ -311,6 +313,7 @@ a {
   }
   .search-box {
     width: 180px;
+     height: 20px;
   }
   .search-results {
     width: 267px;
@@ -353,6 +356,7 @@ a {
 @media (max-width: 368px) {
   .search-box {
     width: 115px;
+     height: 20px;
   }
   .right-one,
   .right-two,
@@ -370,5 +374,6 @@ a {
 @media (max-width: 290px) {
   .search-box {
     width: 90px;
+     height: 20px;
   }
 }
