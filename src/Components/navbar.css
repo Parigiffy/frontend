@@ -269,10 +269,15 @@ a {
 }
 .right-one,
 .right-two,
-.right-three {
+ {
   display: flex;
   align-items: center;
   margin-right: 35px;
+}
+.right-three{
+  display: flex;
+  align-items: center;
+  
 }
 
 /* MEDIA QUERIES */
