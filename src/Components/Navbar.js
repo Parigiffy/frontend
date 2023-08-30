@@ -254,15 +254,7 @@ function Navbar() {
             {totalLength}
           </p>
 
-          <img
-            onClick={() => navigate("/account")}
-            src={
-              user && user.photoURL
-                ? user.photoURL.replace(/^http:\/\//i, "https://") //replaces the http with https
-                : Default
-            }
-            className='default'
-          />
+     
         </div>
         <div className='search-bar2'>
           <input
