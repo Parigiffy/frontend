@@ -99,7 +99,8 @@ function Navbar() {
     <>
       <div className='navbar'>
         <div className='left-section'>
-          {/* <img
+
+    {/* <img
             onClick={() => {
               if (window.location.href.includes("/payment")) {
                 swal({
