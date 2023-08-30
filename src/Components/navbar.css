@@ -266,14 +266,13 @@ a {
 .right-content2 {
   display: flex;
   align-items: center;
-  margin-right: 35px;
 }
 .right-one,
 .right-two,
 .right-three {
   display: flex;
   align-items: center;
-  margin-right: 25px;
+  margin-right: 35px;
 }
 
 /* MEDIA QUERIES */
@@ -304,6 +303,10 @@ a {
   .search-results {
     width: 305px;
     left: 135px;
+  }
+  .right-one,
+  .right-two, {
+    margin-right: 35px;
   }
 }
 
@@ -342,6 +345,10 @@ a {
   width: 20px;
   padding-left: inherit;
 }
+  .right-one,
+  .right-two, {
+    margin-right: 35px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -353,9 +360,8 @@ a {
     width: 45px;
   }
   .right-one,
-  .right-two,
-  .right-three {
-    margin-right: 12px;
+  .right-two, {
+    margin-right: 35px;
   }
    .search-btn {
   height: 30px;
