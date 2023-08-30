@@ -9,6 +9,33 @@ import "./contact.css";
 
 const ContactUs = () => {
   const navigate = useNavigate();
+    const [user, setUser] = useState({
+    name: "",
+    mail: "",
+    msg:"",
+  });
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (user && window.Email) {
+      window.Email.send({
+     Host: "smtp.elasticemail.com",
+        Username: "erofetishgear@gmail.com",
+        Password: "97B24D1B167641A2B5B2E7298A7C13080107",
+        To: "erofetishgear@duck.com",
+        From: "erofetishgear@gmail.com",
+        Subject: `A message from ${user.name} @erofetishgear`,
+        Body: `${user.msg} kindly reply to this address ${user.mail} `,
+        Port: 2525,
+      }).then((message) => {
+        console.log(message);
+        toast.success("we will get back to you soon");
+     
+      });
+    } else {
+      toast.error("kindly fill in correct details");
+    }
+  };
+
   return (
     <>
       <ToastContainer />
@@ -19,11 +46,7 @@ const ContactUs = () => {
           <div className='col-md-6 '>
             <h2 className='text-center'>Contact Us</h2>
             <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                toast.success("we will get back to you soon");
-              }}
-            >
+              onSubmit={handleSubmit}>
               <div className='form-group'>
                 <label htmlFor='name'>Name</label>
                 <input
@@ -31,6 +54,8 @@ const ContactUs = () => {
                   className='form-control'
                   id='name'
                   required
+                  onChange={(e) => setUser({ ...user, name: e.target.value })}
+
                 />
               </div>
               <div className='form-group'>
@@ -40,6 +65,7 @@ const ContactUs = () => {
                   className='form-control'
                   id='email'
                   required
+                  onChange={(e) => setUser({ ...user, mail: e.target.value })}
                 />
               </div>
               <div className='form-group'>
@@ -49,6 +75,7 @@ const ContactUs = () => {
                   className='form-control'
                   id='message'
                   rows='5'
+                  onChange={(e) => setUser({ ...user, msg: e.target.value })}
                 ></textarea>
               </div>
               <button type='submit' className='btn btn-warning mt-3'>
