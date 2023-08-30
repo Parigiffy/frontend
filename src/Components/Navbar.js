@@ -16,6 +16,8 @@ import axios from "axios";
  
 const auth = getAuth(app);
 
+
+
 function Navbar() {
   const CartItems = useSelector((state) => state.CartItemsAdded.CartItems);
   const ListItems = useSelector((state) => state.ItemsAdded.ListItems);
