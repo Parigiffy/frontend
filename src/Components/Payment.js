@@ -577,7 +577,7 @@ function Payment() {
                       <div className='error-message'>{AddressError}</div>
                     )}
                   </div>
-                  <input type='checkbox' /> <small>Save adress details</small>
+                  <input type='checkbox' /> <small>Save address details</small>
                   <b>
                     <p>Add delivery instructions (optional)</p>
                   </b>
