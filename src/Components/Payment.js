@@ -263,9 +263,9 @@ function Payment() {
 
   const handlePincodeBlur = (event) => {
     if (event.target.value === "") {
-      setPincodeError("Please enter your zipcode.");
+      setPincodeError("Please enter your pincode.");
     } else if (Pincode.length !== 5) {
-      setPincodeError("Please enter a valid zipcode.");
+      setPincodeError("Please enter a valid pincode.");
     } else {
       setPincodeError("");
     }
@@ -546,10 +546,10 @@ function Payment() {
 
                 <div className='user-data2'>
                   <div className='user-pincode'>
-                    <p className='user-pin-number'>Zipcode</p>
+                    <p className='user-pin-number'>Pincode</p>
                     <input
                       type='number'
-                      placeholder='Zipcode'
+                      placeholder='Pincode'
                       onBlur={handlePincodeBlur}
                       onChange={handlePincode}
                       value={Pincode}
@@ -577,7 +577,7 @@ function Payment() {
                       <div className='error-message'>{AddressError}</div>
                     )}
                   </div>
-                  <input type='checkbox' /> <small>Save address details</small>
+                  <input type='checkbox' /> <small>Save adress details</small>
                   <b>
                     <p>Add delivery instructions (optional)</p>
                   </b>
@@ -644,10 +644,15 @@ function Payment() {
               <PaymentAnimate />
               <p className='payment-method'>Choose your payment method</p>
               <div className='choose-option'>
-                <div className='cod payment-select '>
+                <div
+                  className='cod payment-select '
+                  onClick={() => {
+                    setModalShow(true);
+                    setPayDetails(paypalpay);
+                  }}
+                >
                   <input
                     type='radio'
-                    defaultChecked
                     name='payment-method'
                     onChange={radioChange}
                     value='paypal'
@@ -659,7 +664,13 @@ function Payment() {
                   Paypal &nbsp;&nbsp;&nbsp;&nbsp;
                   <img src={paypal} width={50} height={42} />
                 </div>
-                <div className='cod payment-select'>
+                <div
+                  className='cod payment-select'
+                  onClick={() => {
+                    setModalShow(true);
+                    setPayDetails(cashapppay);
+                  }}
+                >
                   <input
                     type='radio'
                     name='payment-method'
@@ -673,7 +684,13 @@ function Payment() {
                   Cashapp
                   <img src={cash} width={50} height={42} />
                 </div>
-                <div className='cod payment-select '>
+                <div
+                  className='cod payment-select '
+                  onClick={() => {
+                    setModalShow(true);
+                    setPayDetails(applepay);
+                  }}
+                >
                   <input
                     type='radio'
                     name='payment-method'
@@ -687,7 +704,13 @@ function Payment() {
                   Apple &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <img src={apple} width={50} height={49} />
                 </div>
-                <div className='cod payment-select'>
+                <div
+                  className='cod payment-select'
+                  onClick={() => {
+                    setModalShow(true);
+                    setPayDetails(zellepay);
+                  }}
+                >
                   <input
                     type='radio'
                     name='payment-method'
@@ -701,7 +724,13 @@ function Payment() {
                   Zelle &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <img src={zelle} width={50} height={49} />
                 </div>
-                <div className='cod payment-select'>
+                <div
+                  className='cod payment-select'
+                  onClick={() => {
+                    setModalShow(true);
+                    setPayDetails(venmopay);
+                  }}
+                >
                   <input
                     type='radio'
                     name='payment-method'
@@ -715,7 +744,13 @@ function Payment() {
                   Venmo &nbsp;&nbsp;&nbsp;
                   <img src={venmo} width={50} height={49} />
                 </div>
-                <div className='cod payment-select'>
+                <div
+                  className='cod payment-select'
+                  onClick={() => {
+                    setModalShow(true);
+                    setPayDetails(giftcardpay);
+                  }}
+                >
                   <input
                     type='radio'
                     name='payment-method'
@@ -729,13 +764,21 @@ function Payment() {
                   GiftCard
                   <img src={gift} width={50} height={49} />
                 </div>
-             
+                <div className='credit payment-select'>
+                  <input
+                    type='radio'
+                    name='payment-method'
+                    onChange={radioChange}
+                    value='Credit'
+                  />
+                  Credit/Debit card
+                </div>
               </div>
               <div
                 style={
                   paymentMode === "Credit"
                     ? { display: "flex" }
-                    : { display: "none" } 
+                    : { display: "none" }
                 }
                 className='online-card-section'
               >
