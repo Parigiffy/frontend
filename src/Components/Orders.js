@@ -92,11 +92,17 @@ function Orders() {
                       <div className='order'>
                         <img src={item.image} className='order-img' />
                         <div className='order-text'>
+                          <p>
+                            <b> OrderID:</b>{" "}
+                            <span className='text-success'> {item.id}</span>
+                          </p>
+
                           <p className='order-head'>{item.title}</p>
                           <p className='order-category'>{item.category}</p>
                           <p className='order-quantity'>
                             Number of items: <b>{item.quantity}</b>
                           </p>
+
                           {item.category === "men's clothing" ||
                           item.category === "women's clothing" ? (
                             <p className='order-size'>
@@ -116,6 +122,24 @@ function Orders() {
                               className='order-dispatch'
                             >
                               Ordered succesfully! Soon to be dispatch!
+                            </p>
+                          </div>
+                          <div className='order-success'>
+                            <p
+                              style={{
+                                marginLeft: "5px",
+                                marginTop: 0,
+                                marginBottom: 0,
+                              }}
+                              className='order-dispatch'
+                            >
+                              Expected to be delivered on or before
+                              <b>
+                                {" "}
+                                {new Date(
+                                  Date.now() + 6 * 24 * 60 * 60 * 1000
+                                ).toLocaleDateString("en-US")}
+                              </b>
                             </p>
                           </div>
                         </div>
