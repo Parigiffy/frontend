@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import Email from "./Email";
+import { AddOrder } from "../action/Orders";
+import { useSelector, useDispatch } from "react-redux";
 
 const PaymentModal = (props) => {
   const [showReceipt, setShowReceipt] = useState(false);
+  const dispatch = useDispatch();
+  const CartData = localStorage.getItem("CartItems");
+  console.log(CartData);
 
   const handlePaymentComplete = () => {
     setShowReceipt(true);
+    dispatch(AddOrder(JSON.parse(CartData)));
   };
 
   const handleModalClose = () => {
