@@ -546,10 +546,10 @@ function Payment() {
 
                 <div className='user-data2'>
                   <div className='user-pincode'>
-                    <p className='user-pin-number'>Pincode</p>
+                    <p className='user-pin-number'>Zipcode</p>
                     <input
                       type='number'
-                      placeholder='Pincode'
+                      placeholder='Zipcode'
                       onBlur={handlePincodeBlur}
                       onChange={handlePincode}
                       value={Pincode}
@@ -577,7 +577,7 @@ function Payment() {
                       <div className='error-message'>{AddressError}</div>
                     )}
                   </div>
-                  <input type='checkbox' /> <small>Save adress details</small>
+                  <input type='checkbox' /> <small>Save address details</small>
                   <b>
                     <p>Add delivery instructions (optional)</p>
                   </b>
